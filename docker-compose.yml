@@ -1,0 +1,18 @@
+services:
+  browser-dashboard:
+    image: node:22-bookworm-slim
+    container_name: browser-dashboard
+    working_dir: /app
+
+    volumes:
+      - /DATA/AppData/manual-browser-dashboard:/app
+
+    ports:
+      - "8085:3000"
+
+    command: sh -c "npm install && npm run dev"
+
+    environment:
+      - NODE_ENV=development
+
+    restart: unless-stopped
