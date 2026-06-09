@@ -1,13 +1,14 @@
-<div id="weather-container">
+<div id="weather-widget-container">
   <div id="weather-widget">
     <h2> <%=currWeatherData.city%></h2>
     <div id="weather-widget-day-container">
-      <div class="weather-widget-day">
+      <div id="weather-widget-day">
         <h3>Today</h3>
-        <p><b> <%=currWeatherData.currTemp%> </b></p>
+        <p id="weather-widget-current-temp"><b> <%=currWeatherData.currTemp%> </b></p>
         <img src="https://openweathermap.org/img/wn/<%=currWeatherData.currIcon%>@2x.png"/> 
-        <p> <%=currWeatherData.currMinTemp%>|<%=currWeatherData.currMaxTemp %> </p>
+        <p id="weather-widget-min-max-temp"> <%=currWeatherData.currMinTemp%>|<%=currWeatherData.currMaxTemp %> </p>
       </div>
     </div>
+    <a href="https://forecast.weather.gov/MapClick.php?lat=38.4374614&lon=-122.6750658"><p><b>Forecast</b></p></a>
   </div>
 </div>

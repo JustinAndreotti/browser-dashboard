@@ -5,9 +5,12 @@
     <link rel="stylesheet" href="/styles/main.css" />
   </head>
   <body>
-    <div id="grid-container">
-      <%- include("partials/bookmarksWidget.ejs") %>
-      <%- include("partials/weatherWidget.ejs") %>
+    <div id="main-flex-container">
+      <div id="main-grid-container">
+        <%- include("partials/bookmarksWidget.ejs") %>
+        <%- include("partials/weatherWidget.ejs") %>
+        <%- include("partials/serverWidget.ejs") %>
+      </div>
     </div>
   </body>
 </html>
