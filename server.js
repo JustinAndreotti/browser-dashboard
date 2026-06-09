@@ -19,8 +19,12 @@ app.listen(port, "0.0.0.0", () => {
 });
 
 app.get("/", async (req, res) => {
-  res.render('main.ejs', {
+  res.render('homepage.ejs', {
     currWeatherData: await weatherController.getCurrentWeatherData()
   });
   
+});
+
+app.get("/dashboard", (req, res) => {
+  res.render("dashboard.ejs");
 });
