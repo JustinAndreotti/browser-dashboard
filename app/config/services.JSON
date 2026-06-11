@@ -1,0 +1,12 @@
+[
+  {
+    "name": "name",                             
+    "icon": "/path/to/icon",                    
+    "online": false,                            
+    "port": "portNum",                             
+    "description": "description",               
+    "containerType": "docker or portainer or zimaOS",                   
+    "composeFile": "/path/to/Docker/Compose",    
+    "terminalLink": "unknown"                   
+  }
+]
