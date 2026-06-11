@@ -1,0 +1,24 @@
+<div class="service-card">
+  <div class="service-card-top">
+    <div class="service-icon">
+    <img src= "<%= services.uptimeKuma.icon %>"/>
+    </div>
+    <a class="service-link" href="<%= services.uptimeKuma.url %>" target="_blank">
+      <h2 class="service-name"><%= services.uptimeKuma.name %></h2>
+    </a>
+    <div class="service-online-indicator-circle"></div>
+  </div>
+  <div class="service-card-middle">
+    <p class="service-description"> <%=services.uptimeKuma.description %> </p>
+  </div>
+  <div class="service-card-bottom">
+    <p class="service-info-bar"> <%= services.uptimeKuma.containerType %> </p>
+    <p class="service-port-number"><b> <%= services.uptimeKuma.port %> </b></p>
+    <a class="compose-link" href="http://zimaos.shorthair-artichoke.ts.net:7681/" target="_blank">
+      <img src="icons/docker-icon.png"/>
+    </a> 
+    <a class="terminal-link" href="http://zimaos.shorthair-artichoke.ts.net:7681/" target="_blank">
+      <img src="icons/terminal-icon.png"/>
+    </a>
+  </div>
+</div>

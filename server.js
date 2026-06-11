@@ -4,6 +4,7 @@ import path from "path";
 
 //custom imports
 import * as weatherController from "./app/controllers/weatherController.js";
+import * as services from "./app/config/services.js";
 
 const port = 3000;
 const app = express();
@@ -26,5 +27,8 @@ app.get("/", async (req, res) => {
 });
 
 app.get("/dashboard", (req, res) => {
-  res.render("dashboard.ejs");
+  res.render("dashboard.ejs", {
+    services: services
+  });
+  console.log(services.jellyfin);
 });

@@ -11,7 +11,25 @@
 <body>
   <div id="dashboard-flex-container">
     <div id="dashboard-grid-container">
-      <%- include("partials/serviceCard.ejs") %>
+      <div id="media-stack">
+        <%- include("partials/serviceCards/jellyfinCard") %>
+        <%- include("partials/serviceCards/qbittorrentCard") %>
+        <%- include("partials/serviceCards/sonarrCard") %>
+        <%- include("partials/serviceCards/radarrCard") %>
+        <%- include("partials/serviceCards/prowlarrCard") %>
+        <%- include("partials/serviceCards/clonarrCard") %>
+      </div>
+      <div id="other-apps">
+        <%- include("partials/serviceCards/uptimeKumaCard") %>
+        <%- include("partials/serviceCards/craftyCard") %>
+        <%- include("partials/serviceCards/immichCard") %>
+        <%- include("partials/serviceCards/omeggaCard") %>
+        <%- include("partials/serviceCards/portainerCard") %>
+        <%- include("partials/serviceCards/customDashboardCard") %>
+        <%- include("partials/serviceCards/mullvadCard") %>
+        <%- include("partials/serviceCards/fileBrowserCard") %>
+        <%- include("partials/serviceCards/serverTerminalCard") %>
+      </div>
     </div>
   </div>
 </body>
