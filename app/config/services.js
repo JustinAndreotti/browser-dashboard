@@ -103,9 +103,9 @@ export const uptimeKuma = {
 };
 
 export const crafty = {
-  name: "Crafty Controller",
+  name: "Crafty",
   icon: "icons/crafty-icon.png",
-  url: "http://zimaos.shorthair-artichoke.ts.net:8111",
+  url: "https://zimaos.shorthair-artichoke.ts.net:8111",
   online: "false",
   port: "8111",
   description: "Minecraft Server management",
@@ -165,7 +165,7 @@ export const customDashboard = {
 export const mullvad = {
   name: "Mullvad",
   icon: "icons/browser-dashboard-icon.png",
-  url: "http://https://mullvad.net/en/account/login",
+  url: "https://mullvad.net/en/account/login",
   online: "false",
   port: "",
   description: "VPN used in the media stack",
@@ -196,4 +196,40 @@ export const serverTerminal = {
   containerType: "ZimaOS",
   composeFile: "/path/to/Docker/compose",
   terminalLink: "Url to terminal"
+};
+
+export const tailscale = {
+  name: "Tailscale",
+  icon: "icons/tailscale-icon.png",
+  url: "https://login.tailscale.com/admin/machines",
+  online: "false",
+  port: "5252",
+  description: "Remote connection software",
+  containerType: "ZimaOS",
+  composeFile: "/path/to/Docker/compose",
+  terminalLink: "Url to terminal"
+};
+
+export const playit = {
+  name: "playitGG",
+  icon: "icons/playit-icon.png",
+  url: "https://playit.gg/account/analytics/overview",
+  online: "false",
+  port: "7681",
+  description: "Minecraft server tunnel",
+  containerType: "Docker",
+  composeFile: "/path/to/Docker/compose",
+  terminalLink: "Url to terminal"
+};
+
+export const zimaos = {
+  name: "ZimaOS",
+  icon: "icons/zimaos-icon.png",
+  url: "http://192.168.68.51/#/",
+  online: "false",
+  port: "",
+  description: "ZimaOS admin dashboard",
+  containerType: "ZimaOS",
+  composeFile: "",
+  terminalLink: "http://zimaos.shorthair-artichoke.ts.net:7681"
 };

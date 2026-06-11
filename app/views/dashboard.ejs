@@ -11,7 +11,14 @@
 <body>
   <div id="dashboard-flex-container">
     <div id="dashboard-grid-container">
-      <div id="media-stack">
+      <div id=admin-apps>
+        <%- include("partials/serviceCards/zimaosCard") %>
+        <%- include("partials/serviceCards/fileBrowserCard") %>
+        <%- include("partials/serviceCards/serverTerminalCard") %>
+        <%- include("partials/serviceCards/portainerCard") %>
+        
+      </div>
+      <div id="media-apps">
         <%- include("partials/serviceCards/jellyfinCard") %>
         <%- include("partials/serviceCards/qbittorrentCard") %>
         <%- include("partials/serviceCards/sonarrCard") %>
@@ -21,14 +28,17 @@
       </div>
       <div id="other-apps">
         <%- include("partials/serviceCards/uptimeKumaCard") %>
-        <%- include("partials/serviceCards/craftyCard") %>
         <%- include("partials/serviceCards/immichCard") %>
-        <%- include("partials/serviceCards/omeggaCard") %>
-        <%- include("partials/serviceCards/portainerCard") %>
         <%- include("partials/serviceCards/customDashboardCard") %>
+      </div>
+      <div id=game-server-apps>
+        <%- include("partials/serviceCards/craftyCard") %>
+        <%- include("partials/serviceCards/playitCard") %>
+        <%- include("partials/serviceCards/omeggaCard") %>
+      </div>
+      <div id="vpn-apps">
+        <%- include("partials/serviceCards/tailscaleCard") %>
         <%- include("partials/serviceCards/mullvadCard") %>
-        <%- include("partials/serviceCards/fileBrowserCard") %>
-        <%- include("partials/serviceCards/serverTerminalCard") %>
       </div>
     </div>
   </div>
