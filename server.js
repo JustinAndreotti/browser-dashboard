@@ -35,5 +35,4 @@ app.get("/dashboard", (req, res) => {
   res.render("dashboard.ejs", {
     services: services
   });
-  console.log(services.jellyfin);
 });
