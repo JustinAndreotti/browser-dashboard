@@ -1,13 +1,47 @@
 
-
-
 #dashboard-flex-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 1em;
 }
 
 #dashboard-grid-container {
   display: flex;
   flex-direction: row;
+}
+
+#admin-apps,
+#media-apps,
+#other-apps,
+#game-server-apps,
+#vpn-apps {
+  border: 2px solid var(--primary-border-color);
+  background-color: var(--primary-background-color);
+  height: fit-content;
+  margin: 1em;
+  box-shadow: inset;
+  box-shadow: 5px 5px 2px 0px var(--primary-border-color);
+}
+
+#top-bar-container {
+  display: flex;
+  justify-content: center;
+}
+
+#top-bar {
+  width: 90%;
+  height: 120px;
+  border: 2px solid var(--primary-border-color);
+  background-color: var(--primary-background-color);
+  box-shadow: 5px 5px 2px 0px var(--primary-border-color);
+}
+
+#home-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-top: 1em;
+  margin-left: 1em;
+  
 }

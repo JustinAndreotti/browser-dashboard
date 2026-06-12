@@ -15,6 +15,11 @@ app.set('views', path.join(import.meta.dirname, 'app/views'));
 //Tell the server to use my /public directory for static files
 app.use(express.static(path.join(import.meta.dirname, 'app/public')));
 
+// Prevent browser favicon.ico 404 noise
+app.get('/favicon.ico', (req, res) => {
+  res.sendStatus(204);
+});
+
 app.listen(port, "0.0.0.0", () => {
   console.log(`server listening on port ${port}`);
 });
