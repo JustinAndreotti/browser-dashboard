@@ -14,10 +14,15 @@
   <div class="service-card-bottom">
     <p class="service-info-bar"> <%=service.containerType %> </p>
     <p class="service-port-number"><b> <%=service.port %> </b></p>
-    <a class="compose-link" href="http://zimaos.shorthair-artichoke.ts.net:7681/" target="_blank">
+    <a open-modal class="compose-modal" 
+      href="#compose-dialog-container" 
+      data-service-key="<%= service.key %>"
+      data-service-name="<%= service.name %>" >
       <img src="icons/docker-icon.png"/>
     </a> 
-    <a class="terminal-link" href="http://zimaos.shorthair-artichoke.ts.net:7681/" target="_blank">
+    <a class="terminal-modal" 
+      href="http://zimaos.shorthair-artichoke.ts.net:7681/" 
+      target="_blank">
       <img src="icons/terminal-icon.png"/>
     </a>
   </div>

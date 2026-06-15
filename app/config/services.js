@@ -17,9 +17,14 @@ export const uptimekuma = {
 };
 */
 
+
+//TODO:
+//Update the composeFile paths with the absolute paths for each services FROM THE VIEW WITHIN THE DOCKER CONTAINER
+
 /*Services available to display on serviceCards*/
 export const jellyfin = {
   name: "Jellyfin",
+  key: "jellyfin",
   icon: "icons/jellyfin-icon.png",
   url: "http://zimaos.shorthair-artichoke.ts.net:8097/web/#/home.html",
   online: "false",
@@ -32,6 +37,7 @@ export const jellyfin = {
 
 export const qbittorrent = {
   name: "qBittorrent",
+  key: "qbittorrent",
   icon: "icons/qbittorrent-icon.png",
   url: "http://zimaos.shorthair-artichoke.ts.net:8181",
   online: "false",
@@ -44,6 +50,7 @@ export const qbittorrent = {
 
 export const sonarr = {
   name: "Sonarr",
+  key: "sonarr",
   icon: "icons/sonarr-icon.png",
   url: "http://zimaos.shorthair-artichoke.ts.net:8989",
   online: "false",
@@ -56,6 +63,7 @@ export const sonarr = {
 
 export const radarr = {
   name: "Radarr",
+  key: "radarr",
   icon: "icons/radarr-icon.png",
   url: "http://zimaos.shorthair-artichoke.ts.net:7878",
   online: "false",
@@ -68,6 +76,7 @@ export const radarr = {
 
 export const prowlarr = {
   name: "Prowlarr",
+  key: "prowlarr",
   icon: "icons/prowlarr-icon.png",
   url: "http://zimaos.shorthair-artichoke.ts.net:9696",
   online: "false",
@@ -80,6 +89,7 @@ export const prowlarr = {
 
 export const clonarr = {
   name: "Clonarr",
+  key: "clonarr",
   icon: "icons/clonarr-icon.png",
   url: "http://zimaos.shorthair-artichoke.ts.net:6060",
   online: "false",
@@ -92,6 +102,7 @@ export const clonarr = {
 
 export const uptimeKuma = {
   name: "uptimeKuma",
+  key: "uptimekuma",
   icon: "icons/uptime-kuma-icon.png",
   url: "http://zimaos.shorthair-artichoke.ts.net:3001",
   online: "false",
@@ -104,6 +115,7 @@ export const uptimeKuma = {
 
 export const crafty = {
   name: "Crafty",
+  key: "crafty",
   icon: "icons/crafty-icon.png",
   url: "https://zimaos.shorthair-artichoke.ts.net:8111",
   online: "false",
@@ -116,6 +128,7 @@ export const crafty = {
 
 export const immich = {
   name: "Immich",
+  key: "immich",
   icon: "icons/immich-icon.png",
   url: "http://zimaos.shorthair-artichoke.ts.net:2283",
   online: "false",
@@ -128,6 +141,7 @@ export const immich = {
 
 export const omegga = {
   name: "Omegga WebUI",
+  key: "omeggawebui",
   icon: "icons/omegga-icon.png",
   url: "http://zimaos.shorthair-artichoke.ts.net:8081",
   online: "false",
@@ -140,6 +154,7 @@ export const omegga = {
 
 export const portainer = {
   name: "Portainer",
+  key: "portainer",
   icon: "icons/portainer-icon.png",
   url: "http://zimaos.shorthair-artichoke.ts.net:9000",
   online: "false",
@@ -152,6 +167,7 @@ export const portainer = {
 
 export const customDashboard = {
   name: "Pasty Dash",
+  key: "customdashboard",
   icon: "icons/browser-dashboard-icon.png",
   url: "http://zimaos.shorthair-artichoke.ts.net:8085",
   online: "false",
@@ -164,6 +180,7 @@ export const customDashboard = {
 
 export const mullvad = {
   name: "Mullvad",
+  key: "mullvad",
   icon: "icons/browser-dashboard-icon.png",
   url: "https://mullvad.net/en/account/login",
   online: "false",
@@ -176,6 +193,7 @@ export const mullvad = {
 
 export const fileBrowser = {
   name: "File Browser",
+  key: "filebrowser",
   icon: "icons/file-browser-icon.png",
   url: "http://zimaos.shorthair-artichoke.ts.net/modules/icewhale_files/#/files/ZimaOS-HD",
   online: "false",
@@ -188,6 +206,7 @@ export const fileBrowser = {
 
 export const serverTerminal = {
   name: "Web Terminal",
+  key: "webterminal",
   icon: "icons/terminal-icon.png",
   url: "http://zimaos.shorthair-artichoke.ts.net:7681",
   online: "false",
@@ -200,6 +219,7 @@ export const serverTerminal = {
 
 export const tailscale = {
   name: "Tailscale",
+  key: "tailscale",
   icon: "icons/tailscale-icon.png",
   url: "https://login.tailscale.com/admin/machines",
   online: "false",
@@ -212,6 +232,7 @@ export const tailscale = {
 
 export const playit = {
   name: "playitGG",
+  key: "playit",
   icon: "icons/playit-icon.png",
   url: "https://playit.gg/account/analytics/overview",
   online: "false",
@@ -224,12 +245,13 @@ export const playit = {
 
 export const zimaos = {
   name: "ZimaOS",
+  key: "zimaos",
   icon: "icons/zimaos-icon.png",
   url: "http://192.168.68.51/#/",
   online: "false",
   port: "",
   description: "ZimaOS admin dashboard",
   containerType: "ZimaOS",
-  composeFile: "",
+  composeFile: "not available",
   terminalLink: "http://zimaos.shorthair-artichoke.ts.net:7681"
 };

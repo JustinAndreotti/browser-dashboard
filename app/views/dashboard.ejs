@@ -15,9 +15,10 @@
       <img id="home-icon" src="icons/home-icon.png"/>
     </a>
   </div>
+  <%-include("partials/composeViewerModal") %>
   <div id="dashboard-flex-container">
     <div id="dashboard-grid-container">
-      <div id=admin-apps>
+      <div id="admin-apps">
         <%- include("partials/serviceCard", {service: services.zimaos}) %>
         <%- include("partials/serviceCard", {service: services.fileBrowser}) %>
         <%- include("partials/serviceCard", {service: services.serverTerminal}) %>
@@ -39,7 +40,7 @@
         <%- include("partials/serviceCard", {service: services.customDashboard}) %>
       </div>
 
-      <div id=game-server-apps>
+      <div id="game-server-apps">
         <%- include("partials/serviceCard", {service: services.crafty}) %>
         <%- include("partials/serviceCard", {service: services.playit}) %>
         <%- include("partials/serviceCard", {service: services.omegga}) %>
@@ -52,5 +53,10 @@
 
     </div>
   </div>
+
+  <script type="module">
+    import { composeViewer } from "/scripts/composeViewerModalHandler.js";
+    composeViewer();
+  </script>
 </body>
 </html>
