@@ -26,3 +26,7 @@ Since the dashboard works with base functionality, and I am successfully using i
 - You can configure the paths to where your containers are stored on the host side, and then it *SHOULD* automatically handle it from there
 - If the service is something like an external web link or proprietary to the operating system like ZimaOS' dashboard, filebrowser, and web terminal, make sure you set the containerType in services.js to `"none"` so that it doesnt try to retreive the compose file. 
 - TODO: Might want to make it so there just is no button to open the compose file on services that don't have a compose file. 
+
+## Quicklook at current milestone
+<img width="1390" height="908" alt="image" src="https://github.com/user-attachments/assets/11a7d7e5-fc4f-4638-b9bc-bcad3c99932e" />
+
