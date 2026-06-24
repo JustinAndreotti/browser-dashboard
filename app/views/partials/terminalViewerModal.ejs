@@ -1,0 +1,18 @@
+<dialog data-modal class="terminal-dialog-container">
+  <div class="terminal-dialog-content">
+    <div class="terminal-dialog-header">
+      <p class="terminal-dialog-service-name"></p>
+    </div>
+    <div class="terminal-dialog-text-container">
+      <div id="terminal"></div>
+      <script>
+        var term = new Terminal();
+        term.open(document.getElementById('terminal'));
+        term.write('Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ');
+      </script>
+    </div>
+    <div class="terminal-dialog-footer">
+      <button data-close-terminal-modal class="terminal-close-modal">Close</button>
+    </div>
+  </div>
+</dialog>

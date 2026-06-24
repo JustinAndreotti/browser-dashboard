@@ -16,7 +16,6 @@
 
 */
 
-
 export function composeViewer() {
   const openButtons = document.querySelectorAll(".compose-modal");
   const dialogModal = document.querySelector(".compose-dialog-container");
@@ -25,7 +24,7 @@ export function composeViewer() {
     
   openButtons.forEach(button => {
     button.addEventListener("click", async event => {
-
+      event.preventDefault();
       //identify the serviceCard that called the event
       const serviceName = event.currentTarget.dataset.serviceName;
       const serviceKey = event.currentTarget.dataset.serviceKey;  //dataset.serviceKey === data-service-key
@@ -44,14 +43,7 @@ export function composeViewer() {
       dialogModal.showModal();
     })
   })
-
-  
-
   closeButton.addEventListener("click", () => {
-    //TODO:
-    //Return the text to default
-
-
     //close the modal
     dialogModal.close();
   })
