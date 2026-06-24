@@ -5,7 +5,9 @@ services:
     working_dir: /app
 
     volumes:
-      - /DATA/AppData/manual-browser-dashboard:/app
+      - .:/app                                      #Working app Directory
+      - /DATA/AppData:/app/data/appData             #Path to where your docker containers are stored
+      - /var/lib/casaos/apps/:/app/data/zimaAppData  #Optional secondary path to ZimaOS Apps
 
     ports:
       - "8085:3000"

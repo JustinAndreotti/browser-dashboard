@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="/styles/global.css" />
   <link rel="stylesheet" href="/styles/dashboard.css" />
   <link rel="stylesheet" href="/styles/dashboard-service-card.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pastry Dashboard</title>
 </head>
 <body>
@@ -14,45 +15,48 @@
       <img id="home-icon" src="icons/home-icon.png"/>
     </a>
   </div>
-  <!-- <div id="top-bar-container">
-    <div id="top-bar"></div>
-  </div> -->
+  <%-include("partials/composeViewerModal") %>
   <div id="dashboard-flex-container">
     <div id="dashboard-grid-container">
-      <div id=admin-apps>
-        <%- include("partials/serviceCards/zimaosCard") %>
-        <%- include("partials/serviceCards/fileBrowserCard") %>
-        <%- include("partials/serviceCards/serverTerminalCard") %>
-        <%- include("partials/serviceCards/portainerCard") %>
+      <div id="admin-apps">
+        <%- include("partials/serviceCard", {service: services.zimaos}) %>
+        <%- include("partials/serviceCard", {service: services.fileBrowser}) %>
+        <%- include("partials/serviceCard", {service: services.serverTerminal}) %>
+        <%- include("partials/serviceCard", {service: services.portainer}) %>
       </div>
 
       <div id="media-apps">
-        <%- include("partials/serviceCards/jellyfinCard") %>
-        <%- include("partials/serviceCards/qbittorrentCard") %>
-        <%- include("partials/serviceCards/sonarrCard") %>
-        <%- include("partials/serviceCards/radarrCard") %>
-        <%- include("partials/serviceCards/prowlarrCard") %>
-        <%- include("partials/serviceCards/clonarrCard") %>
+        <%- include("partials/serviceCard", {service: services.jellyfin}) %>
+        <%- include("partials/serviceCard", {service: services.qbittorrent}) %>
+        <%- include("partials/serviceCard", {service: services.sonarr}) %>
+        <%- include("partials/serviceCard", {service: services.radarr}) %>
+        <%- include("partials/serviceCard", {service: services.prowlarr}) %>
+        <%- include("partials/serviceCard", {service: services.clonarr}) %>
       </div>
 
       <div id="other-apps">
-        <%- include("partials/serviceCards/uptimeKumaCard") %>
-        <%- include("partials/serviceCards/immichCard") %>
-        <%- include("partials/serviceCards/customDashboardCard") %>
+        <%- include("partials/serviceCard", {service: services.uptimeKuma}) %>
+        <%- include("partials/serviceCard", {service: services.immich}) %>
+        <%- include("partials/serviceCard", {service: services.customDashboard}) %>
       </div>
 
-      <div id=game-server-apps>
-        <%- include("partials/serviceCards/craftyCard") %>
-        <%- include("partials/serviceCards/playitCard") %>
-        <%- include("partials/serviceCards/omeggaCard") %>
+      <div id="game-server-apps">
+        <%- include("partials/serviceCard", {service: services.crafty}) %>
+        <%- include("partials/serviceCard", {service: services.playit}) %>
+        <%- include("partials/serviceCard", {service: services.omegga}) %>
       </div>
 
       <div id="vpn-apps">
-        <%- include("partials/serviceCards/tailscaleCard") %>
-        <%- include("partials/serviceCards/mullvadCard") %>
+        <%- include("partials/serviceCard", {service: services.tailscale}) %>
+        <%- include("partials/serviceCard", {service: services.mullvad}) %>
       </div>
 
     </div>
   </div>
+
+  <script type="module">
+    import { composeViewer } from "/scripts/composeViewerModalHandler.js";
+    composeViewer();
+  </script>
 </body>
 </html>

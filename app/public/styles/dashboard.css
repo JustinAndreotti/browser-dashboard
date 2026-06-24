@@ -1,4 +1,7 @@
 
+/*-------------------------*/
+/*Dashboard General styling*/
+/*-------------------------*/
 #dashboard-flex-container {
   display: flex;
   flex-direction: row;
@@ -43,4 +46,135 @@
   height: 50px;
   margin-top: 1em;
   margin-left: 1em;
+}
+
+
+
+
+
+/*------------------------*/
+/*Compose dialog styling  */
+/*------------------------*/
+.compose-dialog-container {
+  width: 35%;
+  height: 75%;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 5px 5px 2px 0px var(--primary-border-color);
+}
+
+.compose-dialog-container::backdrop {
+  /* Blurs the content behind the dialog */
+  backdrop-filter: blur(1px);
+  background: rgba(0, 0, 0, 0.35); /* Slight dimming to make the blur pop */
+}
+
+.compose-dialog-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 1em;
+}
+
+.dialog-container-header,
+.dialog-container-footer {
+  flex: 0 0 auto;
+  padding: 0.75rem;
+}
+
+.compose-dialog-service-name {
+  font-weight: bold;
+  margin-bottom: 0;
+  text-decoration: underline;
+}
+
+.dialog-text-container {
+  flex: 1 1 auto;
+  overflow: auto;
+  padding: 0.75rem;
+  border: 2px solid var(--primary-border-color);
+  background-color: var(--secondary-background-color);
+}
+
+.compose-text {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: monospace;
+  min-width: 0;
+  font-size: 15px;
+}
+
+.dialog-container-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0;
+}
+
+.close-modal {
+  border: 2px solid var(--primary-border-color);
+  border-radius: 5px;
+  font: 18px "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+
+
+/*------------------------*/
+/*Dashboard mobile styling*/
+/*------------------------*/
+@media (max-width: 480px) {
+  #dashboard-flex-container,
+  #dashboard-grid-container {
+    flex-direction: column;
+    
+  }
+
+  #dashboard-flex-container {
+    width: 100vw;
+    align-items: center;
+  }
+
+  #dashboard-grid-container {
+    max-width:fit-content;
+  }
+
+  #home-icon {
+    margin-left: 0.2em;
+  }
+
+  .compose-dialog-container {
+    width: 75%;
+    height: 75%;
+  }
+}
+
+
+
+
+
+/*--------------------------*/
+/*Dashboard vertical styling*/
+/*--------------------------*/
+@media (max-width: 1080px) {
+  #dashboard-flex-container,
+  #dashboard-grid-container {
+    flex-direction: column;
+    
+  }
+
+  #dashboard-flex-container {
+    width: 100vw;
+    align-items: center;
+  }
+
+  #dashboard-grid-container {
+    max-width:fit-content;
+  }
+
+  .compose-dialog-container {
+  width: 75%;
+  height: 75%;
+  }
 }
