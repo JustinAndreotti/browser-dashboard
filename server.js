@@ -50,13 +50,14 @@ app.get("/api/composeFile", async (req, res) => {
   const serviceKey = req.query.service;  //serviceKey sent over from the modal handler
   console.log(`API - Compose File Request for: ${serviceKey}`);
 
-  //TODO:
-  //use the serviceKey to check if the service in services.js has a listed compose file path
-  //if it does not have a compose file path then return an error with that response or something.
-
   //get the compose.yaml text
-  const composeText = getServiceComposeFile(serviceKey);
+  try {
+    const composeText = await getServiceComposeFile(serviceKey);
+    res.status(200).send(composeText);
+  } catch (err) {
+    res.status(404).send(`Error: ${err.code}: ${err.message}`);
+  }
   
   //send the compose.yaml in plain text to the browser
-  res.status(200).send(composeText);
+
 });

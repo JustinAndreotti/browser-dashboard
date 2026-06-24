@@ -1,5 +1,5 @@
 /*NOTE: 
-  Online, composeFile, and terminalLink, have not been programming into the EJS prowlarr to work properly. The online indicator is purely cosmetic, and the composeFile and terminalLink currently just go to the base ZimaOS web terminal. Ill have to figure out how to actually access the terminal and pass text into it to access the individual containers.
+  Online, composeFile, and terminalLink, have not been programming into the EJS template to work properly. The online indicator is purely cosmetic, and the composeFile and terminalLink currently just go to the base ZimaOS web terminal. Ill have to figure out how to actually access the terminal and pass text into it to access the individual containers.
 
 */
 
@@ -11,15 +11,16 @@ export const uptimekuma = {
   online: "false",
   port: "0000",
   description: "description",
-  containerType: "Docker",
-  composeFile: "/path/to/Docker/compose",
+  containerType: "Docker",                      //whether its a native app downloaded from the appstore or a docker container imported by the
+                                                   user
+  composeFile: "directoryNameInAppData",        //Name of directory the compose file is stored in
   terminalLink: "Url to terminal"
 };
 */
 
 
 //TODO:
-//Update the composeFile paths with the absolute paths for each services FROM THE VIEW WITHIN THE DOCKER CONTAINER
+//Update the composeFile paths with directory names for each services 
 
 /*Services available to display on serviceCards*/
 export const jellyfin = {
@@ -31,7 +32,7 @@ export const jellyfin = {
   port: "8097",
   description: "Self hosted media streaming",
   containerType: "ZimaOS",
-  composeFile: "/path/to/Docker/compose",
+  composeFile: "jellyfin",
   terminalLink: "Url to terminal"
 };
 
@@ -44,7 +45,7 @@ export const qbittorrent = {
   port: "8181",
   description: "downloading client",
   containerType: "Docker",
-  composeFile: "/path/to/Docker/compose",
+  composeFile: "manual-servarr",
   terminalLink: "Url to terminal"
 };
 
@@ -57,7 +58,7 @@ export const sonarr = {
   port: "8989",
   description: "TV show organizer",
   containerType: "Docker",
-  composeFile: "/path/to/Docker/compose",
+  composeFile: "manual-servarr",
   terminalLink: "Url to terminal"
 };
 
@@ -70,7 +71,7 @@ export const radarr = {
   port: "7878",
   description: "Movie organizer",
   containerType: "Docker",
-  composeFile: "/path/to/Docker/compose",
+  composeFile: "manual-servarr",
   terminalLink: "Url to terminal"
 };
 
@@ -83,7 +84,7 @@ export const prowlarr = {
   port: "9696",
   description: "Download indexer",
   containerType: "Docker",
-  composeFile: "/path/to/Docker/compose",
+  composeFile: "manual-servarr",
   terminalLink: "Url to terminal"
 };
 
@@ -95,8 +96,8 @@ export const clonarr = {
   online: "false",
   port: "6060",
   description: "TRASH guides media profiles and settings",
-  containerType: "ZimaOS",
-  composeFile: "/path/to/Docker/compose",
+  containerType: "docker",
+  composeFile: "manual-clonarr",
   terminalLink: "Url to terminal"
 };
 
@@ -109,7 +110,7 @@ export const uptimeKuma = {
   port: "3001",
   description: "Service monitoring",
   containerType: "ZimaOS",
-  composeFile: "/path/to/Docker/compose",
+  composeFile: "big-bear-uptime-kuma",
   terminalLink: "Url to terminal"
 };
 
@@ -122,7 +123,7 @@ export const crafty = {
   port: "8111",
   description: "Minecraft Server management",
   containerType: "ZimaOS",
-  composeFile: "/path/to/Docker/compose",
+  composeFile: "crafty",
   terminalLink: "Url to terminal"
 };
 
@@ -134,8 +135,8 @@ export const immich = {
   online: "false",
   port: "2283",
   description: "Image viewer and management",
-  containerType: "ZimaOS",
-  composeFile: "/path/to/Docker/compose",
+  containerType: "zimaos",
+  composeFile: "immich",
   terminalLink: "Url to terminal"
 };
 
@@ -148,7 +149,7 @@ export const omegga = {
   port: "8081",
   description: "Brickadia Dedicated Server",
   containerType: "Docker",
-  composeFile: "/path/to/Docker/compose",
+  composeFile: "omegga",
   terminalLink: "Url to terminal"
 };
 
@@ -161,7 +162,7 @@ export const portainer = {
   port: "9000",
   description: "Docker container management",
   containerType: "ZimaOS",
-  composeFile: "/path/to/Docker/compose",
+  composeFile: "portainer",
   terminalLink: "Url to terminal"
 };
 
@@ -174,7 +175,7 @@ export const customDashboard = {
   port: "8081",
   description: "Custom dashboard for server management",
   containerType: "Portainer",
-  composeFile: "/path/to/Docker/compose",
+  composeFile: "manual-browser-dashboard",
   terminalLink: "Url to terminal"
 };
 
@@ -187,7 +188,7 @@ export const mullvad = {
   port: "",
   description: "VPN used in the media stack",
   containerType: "Gluetun",
-  composeFile: "/path/to/Docker/compose",
+  composeFile: "none",
   terminalLink: "Url to terminal"
 };
 
@@ -200,7 +201,7 @@ export const fileBrowser = {
   port: "",
   description: "File browsing and management for the OS",
   containerType: "ZimaOS",
-  composeFile: "/path/to/Docker/compose",
+  composeFile: "none",
   terminalLink: "Url to terminal"
 };
 
@@ -213,7 +214,7 @@ export const serverTerminal = {
   port: "7681",
   description: "Main terminal for the OS",
   containerType: "ZimaOS",
-  composeFile: "/path/to/Docker/compose",
+  composeFile: "none",
   terminalLink: "Url to terminal"
 };
 
@@ -226,7 +227,7 @@ export const tailscale = {
   port: "5252",
   description: "Remote connection software",
   containerType: "ZimaOS",
-  composeFile: "/path/to/Docker/compose",
+  composeFile: "tailscale",
   terminalLink: "Url to terminal"
 };
 
@@ -238,8 +239,8 @@ export const playit = {
   online: "false",
   port: "7681",
   description: "Minecraft server tunnel",
-  containerType: "Docker",
-  composeFile: "/path/to/Docker/compose",
+  containerType: "zimaOS",
+  composeFile: "playit",
   terminalLink: "Url to terminal"
 };
 
@@ -252,6 +253,6 @@ export const zimaos = {
   port: "",
   description: "ZimaOS admin dashboard",
   containerType: "ZimaOS",
-  composeFile: "not available",
+  composeFile: "none",
   terminalLink: "http://zimaos.shorthair-artichoke.ts.net:7681"
 };
