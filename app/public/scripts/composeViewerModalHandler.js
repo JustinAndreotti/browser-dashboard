@@ -24,7 +24,6 @@ export function composeViewer() {
     
   openButtons.forEach(button => {
     button.addEventListener("click", async event => {
-      event.preventDefault();
       //identify the serviceCard that called the event
       const serviceName = event.currentTarget.dataset.serviceName;
       const serviceKey = event.currentTarget.dataset.serviceKey;  //dataset.serviceKey === data-service-key
