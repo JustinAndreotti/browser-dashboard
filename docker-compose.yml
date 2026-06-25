@@ -1,6 +1,7 @@
 services:
   browser-dashboard:
-    image: node:22-bookworm-slim
+    build: .
+    image: browser-dashboard
     container_name: browser-dashboard
     working_dir: /app
 
